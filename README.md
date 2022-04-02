@@ -39,19 +39,22 @@ Attributes:
 27.	absences - number of school absences (numeric: from 0 to 93) 
 28.	G3 - final grade (numeric: from 0 to 20, output target)
 
+
 -------
 ## Task 1: Predict student final grading with regression models.
 This is a regression task. In this task, you will predict the student final grade (attribute 28) with a regression model. You can use all or a subset of attributes 1-27 as features, and even build new features based on these attributes. Models that can be selected from, but not limited to, include Linear Regression, Support Vector Regression, Decision Tree Regression, Nearest Neighbor Regression. You will use Mean squared error (MSE) as the evaluation metrics.
+
 
 --------
 ## Task 2: Predict the student mother’s job with classification model.
 This is a multi-category classification task. In this task, you will predict/classify a student mother’s job (attribute 9) to one of the possible values: teacher, health, service, at_home, other. You can use all or a subset of the rest attributes (1-8, 10-28) as features, and even create new features. Models that can be selected from, but not limited to are: Logistic Regression, Support Vector Machine, Decision Tree, Nearest Neighbor, Naive Bayes. You will use {Accuracy, Precision, Recall, F1} as the evaluation metrics. You will need to report {Precision, Recall, F1} for each category, and also report macro-{Precision, Recall, F1} and accuracy for the whole dataset.
 
+
 --------
 ## Task 3: Predict what kind of extra educational support the student may receive.
 This is a multi-label classification task, which is also called tagging. Students may receive extra educational support from school, family, and paid classes. In this task, you need to predict attribute 16. Please note that one student may have one or several values in this attribute (that is why we call it tagging, just like a webpage can have one or many tags). For example, one student may have “no” extra educational support, while another student may have received school, family and extra paid support. Therefore,multi-label classification is usually used as a tagging model.
 
-** Please differentiate multi-category classification from multi-label classification. If you wrongly design this task as a  multi-category classification task, there will be heavy points deduction.
+**Please differentiate multi-category classification from multi-label classification. If you wrongly design this task as a  multi-category classification task, there will be heavy points deduction.**
 
 You can use all or a subset of the rest attributes (1-15, 17-28) as features, and even create new features. You may want to use the One-vs-the-Rest strategy to get multiple labels. Classification models that can be selected from, but not limited to, are Logistic Regression, Support Vector Machine, Decision Tree, Nearest Neighbor, Naive Bayes. You will use Accuracy and Hamming loss as the evaluation metrics.
 
@@ -73,13 +76,13 @@ For each task, you need to:
 ■	How long to train the model on training data.
 
 Reference materials:
-[Classification models](https://www.youtube.com/watch?v=ppXFoltcX7A)
-[Regression models](https://www.youtube.com/watch?v=ZkjP5RJLQF4)
-[Cross validation](https://www.youtube.com/watch?v=fSytzGwwBVw)
-[Evaluations metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics)
+[Classification models](https://www.youtube.com/watch?v=ppXFoltcX7A).   
+[Regression models](https://www.youtube.com/watch?v=ZkjP5RJLQF4).   
+[Cross validation](https://www.youtube.com/watch?v=fSytzGwwBVw).   
+[Evaluations metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics).   
 
 Tools:
-[Scikit-learn](https://scikit-learn.org/stable/index.html#)
+[Scikit-learn](https://scikit-learn.org/stable/index.html#).       
 If you prefer to use other tools, please get permission from TA before doing assignments.
 
 
