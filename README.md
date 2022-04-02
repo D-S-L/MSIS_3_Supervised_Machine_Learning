@@ -82,4 +82,4 @@ Tools:
 [Scikit-learn](https://scikit-learn.org/stable/index.html#)
 If you prefer to use other tools, please get permission from TA before doing assignments.
 
-![image](https://user-images.githubusercontent.com/39432361/161362938-71d7d03e-f472-4cf4-b19f-ca20de2efa29.png)
+
