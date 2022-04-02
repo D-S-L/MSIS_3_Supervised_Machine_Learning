@@ -83,6 +83,5 @@ Reference materials:
 
 Tools:
 [Scikit-learn](https://scikit-learn.org/stable/index.html#).       
-If you prefer to use other tools, please get permission from TA before doing assignments.
 
 
