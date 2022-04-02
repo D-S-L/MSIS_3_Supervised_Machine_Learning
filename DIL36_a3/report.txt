@@ -1,0 +1,88 @@
+report
+
+
+○ output：
+
+================Task 1================
+Model 1: Ensemble--SGDRegression,lassoRegression,KNeighborsRegressor
+Use 0.409658 s to train
+Ensemble : performance in training data: 5.728553986762224
+Mean squared error	22.63731148280363
+--------------------
+Model 2: ElasticNet
+Elastic Net: Use 0.060852 s to train
+performance in training data: 6.154561860713802
+Mean squared error	22.008008268600953
+================Task 2================
+Model 1: Neural Network
+Use 9.688940 s to train
+Accuracy	0.375	Macro_F1	0.3020505809979494	Macro_Precision	0.26194172113289765	Macro_Recall	0.27692307692307694
+Category	teacher	F1	0.6666666666666666	Precision	0.4705882352941177	Recall	0.36363636363636365
+Category	health	F1	0.0	Precision	0.0	Recall	0.0
+Category	service	F1	0.0	Precision	0.0	Recall	0.0
+Category	at_home	F1	0.0	Precision	0.0	Recall	0.0
+Category	other	F1	0.3333333333333333	Precision	0.46875	Recall	0.7894736842105263
+--------------------
+Model 2: SVM--OneVsRest
+Use 0.109499 s to train
+Accuracy	0.4375	Macro_F1	0.3249487354750512	Macro_Precision	0.3057613376301901	Macro_Recall	0.41028138528138525
+Category	teacher	F1	0.5	Precision	0.15384615384615385	Recall	0.09090909090909091
+Category	health	F1	0.0	Precision	0.0	Recall	0.0
+Category	service	F1	0.0	Precision	0.0	Recall	0.0
+Category	at_home	F1	0.625	Precision	0.37037037037037035	Recall	0.2631578947368421
+Category	other	F1	0.38095238095238093	Precision	0.5245901639344263	Recall	0.8421052631578947
+================Task 3================
+Model 1: Elastic net--OneVsRest
+Use 25.892993 s to train
+Accuracy	0.390625	Hamming loss	0.19658119658119658
+--------------------
+Model 2: SVM--OneVsRest
+Use 0.087550 s to train
+Accuracy	0.34375	Hamming loss	0.1517094017094017
+
+
+
+○ In terms of features：
+
+for feature selection, I do my data exploration in `data exploration.ipynb`, evaluating the correlationship between features in the training dataset.
+data preprocessing : For all of the features I selected, I do standardization on numerical data, and convert categorical data into one-hot representation before training.
+
+* Task 1
+for this task, I draw a correlationship plot between all of numerical data and the target variable--G3, and a histogram plot to demonstrate the impact of each categorical data in G3. I find several features are more important than the other
+Finally, I use these several features in my task 1
+['Dalc', 'Fedu', 'Medu', 'studytime','failures', 'address', 'sex', 'Fjob', 'Mjob', 'reason' , 'higher']  in my model 1.
+To increase the flexibility of model, I add interactional features among those basic features I picked into my model
+
+For my model 2, I use elastic net. I think elastic net can use regularization term to turn off insignificant features, so after data preprocessing, I use all of features in the training dtaset to feed my model, and let the model take care of the feature selection part. 
+To increase the flexibility of model, I add interactional features among those basic features I picked into my model
+
+(P.S.: For all of the features I selected, I do standardization on numerical data, and convert categorical data into one-hot representation before training.)
+
+
+* Task 2
+for the data preprecessing, I do the same job with Task 1---- standardizing numerical data, and convert all of categorical data into one-hot representation.
+
+after data exploration section in `data exploration.ipynb`, I use 
+['address', 'sex', 'Fjob', 'Mjob', 'reason','higher','Medu', 'Fedu','Dalc','studytime','failures'] 
+as my features to train my model in this task. To increase the flexibility of model, I add interactional features among those basic features I picked into my model.
+
+
+For model 1, I try neural network. 
+For neural network, I try different network structure --- like : hidden_layer_sizes=(10,10), hidden_layer_sizes=(13,10,10),hidden_layer_sizes=(13, 13, 10,10)...
+I find 3 hidden layers' structure reaches the dest performance in this context in the testing set.
+
+
+for model 2, I try SVM, using OneVsRest strategy
+For SVM, I try different kernel -- ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, and kernel='sigmoid' reach the best performance in testing set
+
+
+* Task 3
+for task 3, I use Elastic net and SVMClassifier, in OneVsRest strategy.
+In data preprocessing section, for numerical, I do standardization; for categorical data, I convert them into one-hot representaion.
+
+For elastic net, I use ['address', 'sex', 'Fjob', 'Mjob', 'reason','higher','Medu', 'Fedu','Dalc','studytime','failures'] as my features, and let the regularization term in elastic net to turn of insignificant features in the training.
+
+For SVM model, I use ['address', 'sex', 'Fjob', 'Mjob', 'reason','higher','Medu', 'Fedu','Dalc','studytime','failures'] as my features in training this model.
+To increase the flexibility of model, I add interactional features among those basic features I picked into my model.
+In svm section, I try different kernel --- ‘linear’, ‘poly’, ‘rbf’, and svm with rbf kernel reach the best performance 
+ 
