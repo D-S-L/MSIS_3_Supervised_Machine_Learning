@@ -58,7 +58,8 @@ This is a multi-label classification task, which is also called tagging. Student
 
 You can use all or a subset of the rest attributes (1-15, 17-28) as features, and even create new features. You may want to use the One-vs-the-Rest strategy to get multiple labels. Classification models that can be selected from, but not limited to, are Logistic Regression, Support Vector Machine, Decision Tree, Nearest Neighbor, Naive Bayes. You will use Accuracy and Hamming loss as the evaluation metrics.
 
-NT: Hamming loss is defined in https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hamming_loss.html#sklearn.metrics.hamming_loss, and google more information online, such as https://www.youtube.com/watch?v=Dn-w2favLHw.
+NT: [Definition of Hamming loss in scikit](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hamming_loss.html#sklearn.metrics.hamming_loss). 
+[youtube explanation](https://www.youtube.com/watch?v=Dn-w2favLHw).
 
 For each task, you need to:
 ●	Choose two classification models,
