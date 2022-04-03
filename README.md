@@ -63,20 +63,20 @@ NT:
 
 2. [youtube explanation](https://www.youtube.com/watch?v=Dn-w2favLHw).
 
-For each task, you need to:
-●	Choose two classification models,
-●	Tune the model parameters and the construction of your features based on the training data with 10 fold cross-validation.
-●	Learn a model with your best parameters and features and test it with testing data. 
-●	Write the report in report.txt:
-○	Copy your output of the main function.
-○	In terms of features, you need to answer:
-■	What features do you choose to use, and why do you choose them?
-■	How do you use these features (feature engineering)? For example, use its original value, normalized value, log value, one hot vector, etc. 
-○	For each model, you need to write:
-■	The model name.
-■	What parameter you have tried, and corresponding performance on training data?
-■	Final performance of learned model on the testing data.
-■	How long to train the model on training data.
+For each task, you need to:   
+* Choose two classification models,
+* Tune the model parameters and the construction of your features based on the training data with 10 fold cross-validation.
+* Learn a model with your best parameters and features and test it with testing data. 
+* Write the report in report.txt:
+  * Copy your output of the main function.
+  *	In terms of features, you need to answer:
+    *	What features do you choose to use, and why do you choose them?
+    *	How do you use these features (feature engineering)? For example, use its original value, normalized value, log value, one hot vector, etc. 
+  *	For each model, you need to write:
+    *	The model name.
+    *	What parameter you have tried, and corresponding performance on training data?
+    *	Final performance of learned model on the testing data.
+    *	How long to train the model on training data.
 
 Reference materials:
 [Classification models](https://www.youtube.com/watch?v=ppXFoltcX7A).   
