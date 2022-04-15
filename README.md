@@ -1,7 +1,4 @@
-# MSIS_3_Supervised_Machine_Learning
-
-
-The goal of the assignment is to help you get familiar with feature engineering and the use of machine learning toolkit (scikit-learn) for constructing supervised machine learning models to solve real problems. This assignment has three tasks: regression, multi-category classification, and multi-label classification (i.e., tagging). In each task, you will explore and then select two different models, and compare their performance on the given dataset. You will also write a report to record what you have done in the experiments.
+# MSIS_Supervised_Machine_Learning
 
 Dataset: Student Portuguese Class Performance Data Set, altered version of URL.
 
